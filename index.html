@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<title>Show More</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<script src="https://code.jquery.com/jquery-1.12.4.js"
+		  integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="
+		  crossorigin="anonymous">
+		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js">
+		</script>
+	</head>
+	<body>
+		<script id="entry-template" type="text/x-handlebars-template">
+			<section>
+				<h2>{{name}}</h2>
+				<p>
+					{{description}}<!--
+				-->{{#if extended}}<!--
+					 --><span class="elipses">...</span><!--
+					 --><span class="extended">{{extended}}</span>
+					 {{/if}}
+				</p>
+					{{#if extended}}
+					<button class="more">Show More</button>
+					{{/if}}
+			</section>
+		</script>
+		<script src="script.js"></script>
+	</body>
+</html>
